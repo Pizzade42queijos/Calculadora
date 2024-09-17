@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,13 +18,13 @@
                 </div>
             </div>
             <div class="imc">
-               <div class="input" id="altura">
+               <div class="input">
                     <h2>Altura</h2>
-                    <input type="number">
+                    <input id="altura">
                 </div>
-                <div class="input" id="peso">
+                <div class="input">
                 <h2>Peso</h2>
-                <input type="number">
+                <input id="peso">
                 </div>
                 <button id="calcular" onclick="calcular()">Calcular</button>
             </div>
@@ -56,10 +56,11 @@
                 <h2>Output:</h2>
             </div>
             <div class="textarea">
-                <textarea name="" id=""></textarea>
+                <!-- <textarea name="" id=""></textarea> -->
+                 <div id="resultado"></div>
             </div>
         </div>
     </div>
-    <script src="calculadora.js"></script>
+    <script defer src="calculadora.js" defer></script>
 </body>
 </html>

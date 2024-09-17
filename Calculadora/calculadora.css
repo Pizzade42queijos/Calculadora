@@ -78,3 +78,7 @@ button:hover{
 .moedas{
     display:none;
 }
+
+#resultado{
+    color: white;
+}

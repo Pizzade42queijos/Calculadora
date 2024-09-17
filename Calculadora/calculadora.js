@@ -1,66 +1,73 @@
-var displayImc= true;
-var displayGasolina = false;
-var displayMoedas = false;
+var imcVar = true;
+var GasolinaVar = false;
+var MoedasVar = false;
+let resultado = '';
 
-function calcular(){
-    if (displayImc){
-        Resultado(Imc());
-    }
-    else if(displayGasolina){
-        Resultado(Gasolina());
-    }
-    else if(displayMoedas){
-        Resultado(Moedas());
-    }
+function calcular() {
+  if (imcVar) {
+    Resultado();
+  }
+  else if (GasolinaVar) {
+    Resultado(Gasolina());
+  }
+  else if (MoedasVar) {
+    Resultado(Moedas());
+  }
 }
 
-function displayImc(){
-    var displayImc= true;
-    var displayGasolina = false;
-    var displayMoedas = false;
-    document.getElementsByClassName("gasolina").style.display = none;
-    document.getElementsByClassName("moedas").style.display = none;
-    document.getElementsByClassName("imc").style.display = inline-flex;
+function displayImc() {
+  imcVar = true;
+  GasolinaVar = false;
+  MoedasVar = false;
+  document.getElementsByClassName("gasolina")[0].style.display = "none";
+  document.getElementsByClassName("moedas")[0].style.display = "none";
+  document.getElementsByClassName("imc")[0].style.display = "flex";
 }
 
-function displayGasolina(){
-    var displayImc= false;
-    var displayGasolina = true;
-    var displayMoedas = false;
-    document.getElementsByClassName("gasolina").style.display = inline-flex;
-    document.getElementsByClassName("moedas").style.display = none;
-    document.getElementsByClassName("imc").style.display = none;
+function displayGasolina() {
+  imcVar = false;
+  GasolinaVar = true;
+  MoedasVar = false;
+  document.getElementsByClassName("gasolina")[0].style.display = "flex";
+  document.getElementsByClassName("moedas")[0].style.display = "none";
+  document.getElementsByClassName("imc")[0].style.display = "none";
 }
 
-function displayMoedas(){
-    var displayImc= false;
-    var displayGasolina = true;
-    var displayMoedas = false;
-    document.getElementsByClassName("gasolina").style.display = none;
-    document.getElementsByClassName("moedas").style.display = inline-flex;
-    document.getElementsByClassName("imc").style.display = none;
+function displayMoedas() {
+  imcVar = false;
+  GasolinaVar = true;
+  MoedasVar = false;
+  document.getElementsByClassName("gasolina")[0].style.display = "none";
+  document.getElementsByClassName("moedas")[0].style.display = "flex";
+  document.getElementsByClassName("imc")[0].style.display = "none";
 }
+
+
 
 function Imc() {
-    const peso = document.getElementById('input1').value;
-    const altura = document.getElementById('input2').value;
-    const imc = peso / (altura * altura);
-    let categoria = '';
-    if (imc < 18.5) {
-      categoria = 'Abaixo do peso';
-    } else if (imc >= 18.5 && imc < 24.9) {
-      categoria = 'Peso normal';
-    } else if (imc >= 25 && imc < 29.9) {
-      categoria = 'em Sobrepeso';
-    } else {
-      categoria = 'Obeso';
-    }
-    return 'seu imc é '+imc+', que te classifica como '+categoria;
+  const inputPeso = document.getElementById('peso');
+  const inputAltura = document.getElementById('altura');
+  const peso = (inputPeso.value);
+  const altura = parseFloat(inputAltura.value);
+  console.log(peso)
+  console.log(altura)
+
+  const imc = peso / (altura * altura);
+  console.log(imc)
+
+  if (imc < 18.5) {
+    categoria = 'Abaixo do peso';
+  } else if (imc >= 18.5 && imc < 24.9) {
+    categoria = 'Peso normal';
+  } else if (imc >= 25 && imc < 29.9) {
+    categoria = 'em Sobrepeso';
+  } else {
+    categoria = 'Obeso';
+  }
+  return resultado = `seu imc é ${imc.toFixed(1)} que te classifica como ${categoria}`;
 
 }
 
-
-
-function Resultado(text) {
-    document.getElementById('myTextarea').value = text;
-  }
+function Resultado() {
+  document.getElementById('resultado').textContent = Imc();
+}
