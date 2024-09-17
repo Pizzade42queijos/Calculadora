@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadoras</title>
+    <link rel="stylesheet" href="calculadora.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculadora">
+            <div class="selector">
+                <h1>Central de Calculadoras</h1>
+                <div class="selectorholder">
+                    <button class="selectorbutton" onclick="displayImc()" >imc</button>
+                    <button class="selectorbutton" onclick="displayGasolina()">gasolina</button>
+                    <button class="selectorbutton" onclick="displayMoedas()">moedas</button> </button>
+                </div>
+            </div>
+            <div class="imc">
+               <div class="input" id="altura">
+                    <h2>Altura</h2>
+                    <input type="number">
+                </div>
+                <div class="input" id="peso">
+                <h2>Peso</h2>
+                <input type="number">
+                </div>
+                <button id="calcular" onclick="calcular()">Calcular</button>
+            </div>
+            <div class="gasolina">
+                <div class="input" id="valorGasolina">
+                    <h2>Valor da Gasolina</h2>
+                    <input type="number">
+                </div>
+                <div class="input" id="valorAlcool">
+                <h2>Valor do Alcool</h2>
+                <input type="number">
+                </div>
+                <button id="calcular" onclick="calcular()">Calcular</button>
+            </div>
+            <div class="moedas">
+                <div class="input" id="dolar">
+                    <h2>Cotação dolar</h2>
+                    <input type="number">
+                </div>
+                <div class="input" id="reais">
+                <h2>Valor em Reais</h2>
+                <input type="number">
+                </div>
+                <button id="calcular" onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+        <div class="text_display">
+            <div id="texthead">
+                <h2>Output:</h2>
+            </div>
+            <div class="textarea">
+                <textarea name="" id=""></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="calculadora.js"></script>
+</body>
+</html>
