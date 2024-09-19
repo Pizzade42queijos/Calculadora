@@ -13,3 +13,5 @@ Calculadora avançada para três tarefas específicas:
 3. Cálculo de câmbio monerário Real x Dólar
   Realiza uma simulação de câmbio monetário de uma suma em reais com base no seu valor quanto a cotação do dólar.
 ![calculadora tripla](calculadora2.png)
+
+Screenshot de versão antiga.
