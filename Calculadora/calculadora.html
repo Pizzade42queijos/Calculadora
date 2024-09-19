@@ -17,39 +17,42 @@
                     <button class="selectorbutton" id="selectormoedas" onclick="displayMoedas()">moedas</button> </button>
                 </div>
             </div>
+
             <div class="imc">
                <div class="input">
                     <h2>Altura</h2>
-                    <input type="number" id="altura" required>
+                    <input type="number" id="inputAltura" required>
                 </div>
+
                 <div class="input">
-                <h2>Peso</h2>
-                <input id="peso">
+                    <h2>Peso</h2>
+                    <input type="number" id="inputPeso" required>
                 </div>
-                <button class="calcular" id="calcularImc" onclick="calcular()">Calcular</button>
+                <button class="calcular" id="calcularImc" onclick="Imc()">Calcular</button>
             </div>
+
             <div class="gasolina">
                 <div class="input" id="valorGasolina">
-                    <h2>Valor da Gasolina</h2>
+                    <h2>Val Gasolina</h2>
                     <input type="number" id="inputGas" required>
-                    <div class="labelLine">Valor</div>
                 </div>
-                <div class="inputContainer" id="valorAlcool">
-                <h2>Valor do Alcool</h2>
-                <input type="number">
+
+                <div class="input" id="valorAlcool">
+                    <h2>Val Alcool</h2>
+                    <input type="number" id="inputAlco" required>
                 </div>
-                <button class="calcular" id="calcularGas" onclick="calcular()">Calcular</button>
+                <button class="calcular" id="calcularGas" onclick="calcularGas()">Calcular</button>
             </div>
             <div class="moedas">
-                <div class="inputContainer" id="dolar">
+                <div class="input" id="dolar">
                     <h2>Cotação dolar</h2>
-                    <input type="number" id="inputMoedas" required>
+                    <input type="number" id="inputDolar" required>
                 </div>
-                <div class="inputContainer" id="reais">
-                <h2>Valor em Reais</h2>
-                <input type="number">
+                <div class="input" id="reais">
+                    <h2>Valor em Reais</h2>
+                    <input type="number" id="inputReais" required>
                 </div>
-                <button class="calcular" id="calcularMoedas" onclick="calcular()">Calcular</button>
+                <button class="calcular" id="calcularMoedas" onclick="calcularMoedas()">Calcular</button>
             </div>
         </div>
         <div class="text_display">
